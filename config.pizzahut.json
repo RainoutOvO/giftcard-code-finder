@@ -15,6 +15,12 @@
     "fullUrl": "https://appmall.pizzahut.com.cn/api/card/queryRealCardInfo",
 
     "threads": 20,
+    "requestsPerSecond": 10,
+    "requestTimeout": 15,
     "maxRetry": 5,
-    "retryWait": 3
+    "retryWait": 3,
+    "retryMaxWait": 60,
+    "maxAttempts": 20,
+    "reviewRevision": 0,
+    "checkpointFile": "progress.jsonl"
 }

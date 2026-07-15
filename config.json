@@ -2,7 +2,7 @@
     "cardSequence": "",
     "paymentPrefix": "",
     "token": "",
-    "openId": "omxHq0Jd7YT4IAQqpos_7StS_e4M",
+    "openId": "",
 
     "secretKey": "kfc",
     "encodeList": ["smsCode"],
@@ -15,6 +15,12 @@
     "fullUrl": "https://appcamp.kfc.com.cn/api/card/queryRealCardInfo",
 
     "threads": 20,
+    "requestsPerSecond": 10,
+    "requestTimeout": 15,
     "maxRetry": 5,
-    "retryWait": 3
+    "retryWait": 3,
+    "retryMaxWait": 60,
+    "maxAttempts": 20,
+    "reviewRevision": 0,
+    "checkpointFile": "progress.jsonl"
 }
