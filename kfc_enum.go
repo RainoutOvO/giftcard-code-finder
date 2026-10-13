@@ -342,7 +342,12 @@ func transientMessage(message string) bool {
 func verifiedInvalidResponse(errCode, errorCode string) bool {
 	// 接口存在两种已确认的错误码表示：标准 541，以及 EGC 的复合码。
 	// 使用精确白名单，避免 strings.Contains("541") 带来的误判。
-	return errCode == "541" || errCode == "500541" || errorCode == "52520541"
+	for _, code := range []string{"541", "500541", "52520541"} {
+		if errCode == code || errorCode == code {
+			return true
+		}
+	}
+	return false
 }
 
 func congestionResponse(errCode, errorCode string) bool {
